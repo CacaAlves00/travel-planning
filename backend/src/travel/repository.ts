@@ -8,7 +8,7 @@ class TravelRepository {
 
   constructor() {
     this.db = new Datastore<Travel>({
-      filename: './travels.db',
+      filename: './db/travels.db',
       autoload: true,
     })
   }
