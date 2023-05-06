@@ -1,7 +1,11 @@
-import express, { Application, Request, Response } from 'express'
+import express, { Application, Router, Request, Response } from 'express'
 import TravelController from './travel/controller'
 
 const app = express()
+app.use(express.json())
+
+const apiRouter = Router()
+app.use('/api/v1', apiRouter)
 
 function setUpControllers() {
 
@@ -9,7 +13,7 @@ function setUpControllers() {
 
   for (let Controller of controllers) {
     const controller = new Controller()
-    controller.route(app)
+    controller.route(apiRouter)
   }
 }
 

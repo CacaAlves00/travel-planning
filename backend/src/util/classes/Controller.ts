@@ -7,7 +7,7 @@ abstract class Controller {
         this.router = Router()
     }
 
-    protected abstract route(app: Application): void
+    protected abstract route(app: Router): void
 }
 
 export default Controller

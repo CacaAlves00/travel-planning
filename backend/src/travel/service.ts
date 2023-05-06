@@ -1,31 +1,31 @@
 import NotFoundError from '../util/errors/NotFoundError';
 import Travel from './model';
+import TravelRepository from './repository';
 
 class TravelService {
-    deleteOne(id: string) {
-        throw new Error('Method not implemented.');
-    }
-    updateOne(id: string) {
-        throw new Error('Method not implemented.');
-    }
-    createOne(): Travel  {
-        throw new Error('Method not implemented.');
+
+    private readonly repository: TravelRepository
+
+    constructor() {
+        this.repository = new TravelRepository()
     }
 
-
-    findOne(id: string): Travel {
-        if (id === '1')
-            throw new NotFoundError('The requested resource was not found.')
-        return {
-            id: 1,
-            cities: []
-        }
+    async deleteOne(id: string) {
+        await this.repository.deleteOne(id)
     }
-    findAll(): Travel[] {
-        return [{
-            id: 1,
-            cities: []
-        }]
+    async updateOne(id: string, travel: Travel) {
+        await this.repository.updateOne(id, travel)
+    }
+    async createOne(travel: Travel): Promise<Travel> {
+        return await this.repository.createOne(travel)
+    }
+
+    async findOne(id: string): Promise<Travel> {
+        return await this.repository.findOne(id)
+    }
+
+    async findAll(): Promise<Travel[]> {
+        return await this.repository.findAll()
     }
 
 }

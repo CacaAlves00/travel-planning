@@ -14,9 +14,9 @@ class TravelController extends Controller {
         this.service = new TravelService()
     }
 
-    route(app: Application) {
+    route(router: Router) {
 
-        app.use('/travel', this.router)
+        router.use('/travel', this.router)
 
         this.router.get('/', async (req: Request, res: Response) => {
             try {
@@ -45,7 +45,7 @@ class TravelController extends Controller {
 
         this.router.post('/', async (req: Request, res: Response) => {
             try {
-                const data = await this.service.createOne()
+                const data = await this.service.createOne(req.body)
                 res.status(201).json({ data })
 
             } catch (error: any) {
@@ -55,8 +55,8 @@ class TravelController extends Controller {
 
         this.router.put('/:id', async (req: Request, res: Response) => {
             try {
-                const data = await this.service.updateOne(req.params.id)
-                res.status(200).json({ data })
+                await this.service.updateOne(req.params.id, req.body)
+                res.sendStatus(204)
 
             } catch (error: any) {
                 if (error instanceof NotFoundError) {
@@ -69,8 +69,8 @@ class TravelController extends Controller {
 
         this.router.delete('/:id', async (req: Request, res: Response) => {
             try {
-                const data = await this.service.deleteOne(req.params.id)
-                res.status(200).json({ data })
+                await this.service.deleteOne(req.params.id)
+                res.sendStatus(204)
 
             } catch (error: any) {
                 if (error instanceof NotFoundError) {
