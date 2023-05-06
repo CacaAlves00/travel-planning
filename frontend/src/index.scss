@@ -4,9 +4,15 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  font-family: 'Source Serif Pro', serif;
+  background: #F5F8FC;
 
-  h1 {
+  * {
     font-family: 'Inter', sans-serif;
+    font-weight: 300;
+  }
+  
+  h1 {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 400;
   }
 }
