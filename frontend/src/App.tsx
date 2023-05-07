@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.scss'
 import { BrowserRouter, Link, Route, RouterProvider, Routes, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import TravelsPage from './pages/TravelsPage/TravelsPage';
 import TravelPage from './pages/TravelPage/TravelPage';

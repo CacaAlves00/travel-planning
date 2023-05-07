@@ -8,7 +8,7 @@ function TravelPage() {
   const params = useParams()
   
   return (
-    <article className='travel-page'>
+    <article className='travel-page fade-in'>
       {/* <PageHeader /> */}
       {
         params['travelId']
