@@ -9,7 +9,7 @@ function TravelPage() {
   
   return (
     <article className='travel-page fade-in'>
-      {/* <PageHeader /> */}
+      <PageHeader />
       {
         params['travelId']
       }
