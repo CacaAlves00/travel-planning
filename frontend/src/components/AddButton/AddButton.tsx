@@ -1,9 +1,18 @@
 import React from 'react'
 import './AddButton.scss'
 
-function AddButton() {
+type AddButtonProps = {
+  onClick: () => void
+}
+
+function AddButton({ onClick }: AddButtonProps) {
   return (
-    <div className='add-button scale-on-hover'>+</div>
+    <div
+      className='add-button scale-on-hover'
+      onClick={onClick}
+    >
+      +
+    </div>
   )
 }
 

@@ -5,4 +5,18 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  cursor: pointer;
+
+  height: 6vh;
+
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 5vh;
+    height: 5vh;
+  }
 }
