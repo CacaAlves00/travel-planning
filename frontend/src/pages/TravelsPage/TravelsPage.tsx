@@ -1,9 +1,13 @@
 import React from 'react'
 import './TravelsPage.scss'
+import PageHeader from '../../components/PageHeader/PageHeader'
+
 
 function TravelsPage() {
   return (
-    <div className='travels-page'>TravelsPage</div>
+    <article className='travels-page'>
+      <PageHeader />
+    </article>
   )
 }
 

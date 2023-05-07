@@ -1,12 +1,18 @@
 import React from 'react'
 import './App.scss'
+import { BrowserRouter, Link, Route, RouterProvider, Routes, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import TravelsPage from './pages/TravelsPage/TravelsPage';
+import TravelPage from './pages/TravelPage/TravelPage';
 
 function App() {
+
   return (
-    <div className='App'>
-      <h1>Travel planner</h1>
-      <h2>Slipping through my fingers</h2>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<TravelsPage />} />
+        <Route path='travel/:travelId' element={<TravelPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

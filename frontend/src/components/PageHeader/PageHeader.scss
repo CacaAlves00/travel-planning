@@ -1,0 +1,23 @@
+.page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3vw;
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 3vw;
+      height: 3vw;
+    }
+  }
+}
