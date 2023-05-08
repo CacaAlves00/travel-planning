@@ -10,7 +10,7 @@ O banco de dados utilizado foi NeDB.
 
 # Como instalar
 
-- Faça o download do repositório
+- Faça o clone do repositório
 - Instale a dependências (com o comando *npm i*), tanto na pasta **frontend** como na pasta **backend**.
 - Crie um arquivo .env no **backend** e insira um valor para PORT (e.g., PORT=3333).
 - Faça login na Rapid API e subscreva-se nas API's TrueWay Matrix (https://rapidapi.com/trueway/api/trueway-matrix/) e GeoDB Cities (https://rapidapi.com/wirefreethought/api/geodb-cities/)
