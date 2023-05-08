@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import ListItem from '../../../../../components/ListItem/ListItem'
-import Travel, { deleteTravel } from '/home/dwight/workspaces/typescript/projects/travel-planning/frontend/src/api/travel'
 import { swapElementWithNext, swapElementWithPrevious } from '../../../../../util/swapArrayElements'
 import { useTravelsPageContext } from '../../../util/TravelsPageContext'
 import './TravelsPageTravelListItem.scss'
+import Travel, { deleteTravel } from '../../../../../api/travel'
 
 type TravelListItemProps = {
   travel: Travel
