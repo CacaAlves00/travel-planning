@@ -1,8 +1,12 @@
 import axios, { AxiosResponse } from 'axios'
 
+export type TravelCity = {
+  name: string, latitude: number, longitude: number
+}
+
 export type Travel = {
-    _id: string
-    cities: string[]
+  _id: string
+  cities: TravelCity[]
 }
 
 export default Travel
@@ -20,7 +24,7 @@ export async function getTravel(id: string): Promise<Travel> {
 }
 
 export async function createTravel(cities: string[]): Promise<Travel> {
-  const response: AxiosResponse<{ data: Travel }> = await axios.post(`${API_URL}`, {cities})
+  const response: AxiosResponse<{ data: Travel }> = await axios.post(`${API_URL}`, { cities })
   return response.data.data
 }
 

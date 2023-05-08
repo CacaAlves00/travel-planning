@@ -33,6 +33,7 @@ function TravelsPage() {
           <TravelsPageInputs />
           <TravelsPageTravels />
         </main>
+        
       </article>
     </TravelsPageContext.Provider>
   )

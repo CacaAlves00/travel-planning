@@ -1,14 +1,17 @@
 import axios from 'axios'
 
-interface city {
-    city: string
+export type City = {
+    name: string
+    completeName: string
     country: string
+    countryCode: string
     region: string
-    latitude: string
-    longitude: string
+    regionCode: string
+    latitude: 25.309469444
+    longitude: 55.342811111
 }
 
-export async function getCitiesByPrefix(prefix: string): Promise<string[]> {
+export async function getCitiesByPrefix(prefix: string): Promise<City[]> {
     try {
         const options = {
             method: 'GET',
@@ -23,13 +26,17 @@ export async function getCitiesByPrefix(prefix: string): Promise<string[]> {
         }
 
         const response = await axios.request(options)
-        const cities: string[] = response
+        const cities: City[] = response
             .data
             .data
-            .map((city: { name: string, country: string }) =>
-                `${city.name}, ${city.country}`)
-            .filter((elem: string, index: number, self: string[]) =>
-                index === self.indexOf(elem)
+            .map((city: City) => ({
+                ...city,
+                completeName: `${city.name}, ${city.regionCode}, ${city.countryCode}`,
+            })
+            )
+            .filter(
+                (city: City, index: number, self: City[]) =>
+                    self.findIndex((c: City) => c.completeName === city.completeName) === index
             )
 
 

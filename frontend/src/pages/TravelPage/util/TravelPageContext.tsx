@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { createContext } from 'react'
 import Travel from '../../../api/travel'
+import { DistanceDuration } from '../hooks/useGetDistancesAndDurationsBetweenCities'
 
 type TravelPageContextType = {
     travel: Travel | undefined
@@ -8,6 +9,8 @@ type TravelPageContextType = {
     searchCity: string
     setSearchCity: React.Dispatch<React.SetStateAction<string>>
     fetchData: () => void
+    distancesAndDurationsBetweenCities: DistanceDuration[]
+    totalDistancesAndDurationsBetweenCities: DistanceDuration
 }
 
 export const TravelPageContext = createContext<TravelPageContextType>({
@@ -16,6 +19,8 @@ export const TravelPageContext = createContext<TravelPageContextType>({
     searchCity: '',
     setSearchCity: () => { },
     fetchData: () => { },
+    distancesAndDurationsBetweenCities: [],
+    totalDistancesAndDurationsBetweenCities: {distanceInKms: 0, durationInHours: 0}
 })
 
 export const useTravelPageContext = () => useContext(TravelPageContext)

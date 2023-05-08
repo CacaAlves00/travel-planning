@@ -3,7 +3,7 @@ import './TravelPageInputs.scss'
 import SearchInputAutocomplete from '../../../../components/SearchInputAutocomplete/SearchInputAutocomplete'
 import { useTravelPageContext } from '../../util/TravelPageContext'
 import { updateTravel } from '../../../../api/travel'
-import { getCitiesByPrefix } from '../../../../api/city'
+import { City, getCitiesByPrefix } from '../../../../api/city'
 
 function TravelPageInputs() {
 
@@ -11,22 +11,35 @@ function TravelPageInputs() {
 
   return (
     <section className='inputs'>
-      <SearchInputAutocomplete
+      <SearchInputAutocomplete<City>
         value={searchCity}
         onChange={(value) => setSearchCity(value)}
         onSelect={async (value) => {
-          console.log(travel)
+
           if (typeof travel !== 'undefined') {
+            const reachedLimitLength =
+              travel.cities.length > 24
+
+            if (reachedLimitLength) return
+
             await updateTravel(travel._id, {
               _id: travel._id,
-              cities: [...travel.cities, value]
+              cities: [
+                ...travel.cities,
+                {
+                  name: value.completeName,
+                  latitude: value.latitude,
+                  longitude: value.longitude,
+                }
+              ]
             })
 
             fetchData()
           }
         }}
         placeholder='Procurar cidade (digite pelo menos 3 letras)'
-        autocomplete={(prefix) => getCitiesByPrefix(prefix)}
+        autocomplete={async (prefix) => getCitiesByPrefix(prefix)}
+        getAutocompleteValue={val => val.completeName}
       />
     </section>
   )

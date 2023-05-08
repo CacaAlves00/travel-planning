@@ -2,24 +2,27 @@ import React, { useEffect, useState } from 'react'
 import './SearchInputAutocomplete.scss'
 import SearchInput from '../SearchInput/SearchInput'
 import { updateTravel } from '../../api/travel'
+import useIsTyping from '../../hooks/useIsTyping'
 
-type SearchInputAutocompleteProps = {
+type SearchInputAutocompleteProps<T> = {
     value: string
     onChange: (value: string) => void
-    onSelect: (value: string) => void
+    onSelect: (value: T) => void
     placeholder: string
-    autocomplete: (prefix: string) => Promise<string[]>
+    autocomplete: (prefix: string) => Promise<T[]>
+    getAutocompleteValue: (val: T) => string
 }
 
-function SearchInputAutocomplete({ onChange, placeholder, value,
-    autocomplete, onSelect }: SearchInputAutocompleteProps) {
+function SearchInputAutocomplete<T>({ onChange, placeholder, value,
+    autocomplete, onSelect, getAutocompleteValue }: SearchInputAutocompleteProps<T>) {
 
-    const [autocompleteOptions, setAutocompleteOptions] = useState<string[]>([])
+    const [autocompleteOptions, setAutocompleteOptions] = useState<T[]>([])
+    const isTyping = useIsTyping(1000)
 
     useEffect(() => {
         const searchHasAtLeast3Letters = value.length >= 3
 
-        if (searchHasAtLeast3Letters) {
+        if (searchHasAtLeast3Letters && !isTyping) {
             autocomplete(value)
                 .then(values => {
                     if (values.length > 0)
@@ -30,12 +33,12 @@ function SearchInputAutocomplete({ onChange, placeholder, value,
         else
             cleanAutocompleteOptions()
 
-    }, [value])
+    }, [value, isTyping])
 
     const cleanAutocompleteInput = () => onChange('')
     const cleanAutocompleteOptions = () => setAutocompleteOptions([])
 
-    function handleAutocompleteOptionClick(option: string) {
+    function handleAutocompleteOptionClick(option: T) {
         onSelect(option)
         cleanAutocompleteInput()
         cleanAutocompleteOptions()
@@ -52,10 +55,10 @@ function SearchInputAutocomplete({ onChange, placeholder, value,
             <ul className='search-dropdown'>
                 {autocompleteOptions.map((option) => (
                     <li
-                        key={option}
+                        key={getAutocompleteValue(option)}
                         onClick={() => handleAutocompleteOptionClick(option)}
                     >
-                        {option}
+                        {getAutocompleteValue(option)}
                     </li>
                 ))}
             </ul>

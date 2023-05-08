@@ -1,6 +1,6 @@
 type Travel = {
     id: number
-    cities: string[]
+    cities: { name: string, latitude: number, longitude: number }[]
 }
 
 export default Travel
