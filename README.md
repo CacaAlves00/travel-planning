@@ -1,5 +1,6 @@
 # travel-planning
 Aplicativo planejador de viagem.
+A duração das viagens tomam como meio de locomoção um automóvel.
 Implementado, tanto no **frontend** como no **backend**, com a linguagem TypeScript.
 Implementado com a biblioteca React no **frontend** e com Node.js (utilizando Express) no **backend**.
 O banco de dados utilizado foi NeDB.
