@@ -1,5 +1,8 @@
 # travel-planning
 Aplicativo planejador de viagem.
+Implementado, tanto no **frontend** como no **backend**, com a linguagem TypeScript.
+Implementado com a biblioteca React no **frontend** e com Node.js (utilizando Express) no **backend**.
+O banco de dados utilizado foi NeDB.
 
 [Project design no Figma](https://www.figma.com/file/LVZ2NWQhBk3ctXonYirSA8/Untitled?type=design&node-id=0-1)
 
