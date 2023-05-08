@@ -1,0 +1,34 @@
+.search-input-autocomplete {
+  cursor: pointer;
+  position: relative;
+
+  .search-dropdown {
+    border-radius: 1px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    
+    li {
+        height: 4vh;
+        padding-left: 2vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+        &:hover {
+          background-color: #7FC8F8;
+        }
+    }
+  }
+}

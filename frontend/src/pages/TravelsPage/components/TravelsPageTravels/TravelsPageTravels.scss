@@ -1,0 +1,11 @@
+#travels {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 7vh;
+
+  a {
+    color: #292625;
+    text-decoration: none;
+  }
+}

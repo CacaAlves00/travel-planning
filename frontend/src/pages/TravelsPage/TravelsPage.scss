@@ -7,23 +7,5 @@
     display: flex;
     flex-direction: column;
     row-gap: 8vh;
-
-    #inputs {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    #travels {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      row-gap: 4vh;
-
-      a {
-        color: #292625;
-        text-decoration: none;
-      }
-    }
   }
 }

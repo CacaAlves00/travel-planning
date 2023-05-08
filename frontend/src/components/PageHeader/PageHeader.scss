@@ -11,9 +11,12 @@
     justify-content: center;
     column-gap: 2vw;
 
+    user-select: none;
+
     h1 {
       font-size: 3rem;
-      text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.1);
+      font-weight: 400;
+      // text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.1);
     }
 
     img {

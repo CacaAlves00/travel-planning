@@ -2,20 +2,20 @@ import React from 'react'
 import './SearchInput.scss'
 
 type SearchInputProps = {
-    value: string
-    onChange: (value: string) => void
-    placeholder: string
-  }
+  value: string
+  onChange: (value: string) => void
+  placeholder: string
+}
 
-function SearchInput({onChange, value, placeholder}: SearchInputProps) {
+function SearchInput({ onChange, value, placeholder }: SearchInputProps) {
   return (
-      <input 
+    <input
       className='search-input'
-        type='text' 
-        placeholder={placeholder} 
-        value={value} 
-        onChange={(e) => onChange(e.target.value)}
-      />
+      type='text'
+      placeholder={placeholder}
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+    />
   )
 }
 
