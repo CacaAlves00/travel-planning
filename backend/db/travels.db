@@ -14,3 +14,6 @@
 {"cities":[{"name":"Santo André, SP, BR","latitude":-23.66389,"longitude":-46.53833},{"name":"Ilha Borá-Cavalo, RO, BR","latitude":-11.166666666,"longitude":-59.95},{"name":"Bogotá, CUN, CO","latitude":4.60971,"longitude":-74.08175}],"_id":"_p0PU1bB494I7276SaKJ4"}
 {"cities":[{"name":"Santo André, SP, BR","latitude":-23.66389,"longitude":-46.53833},{"name":"Bogotá, CUN, CO","latitude":4.60971,"longitude":-74.08175},{"name":"Ilha Borá-Cavalo, RO, BR","latitude":-11.166666666,"longitude":-59.95}],"_id":"_p0PU1bB494I7276SaKJ4"}
 {"cities":[{"name":"Santo André, SP, BR","latitude":-23.66389,"longitude":-46.53833},{"name":"Ilha Borá-Cavalo, RO, BR","latitude":-11.166666666,"longitude":-59.95}],"_id":"_p0PU1bB494I7276SaKJ4"}
+{"cities":[{"name":"Santo André, SP, BR","latitude":-23.66389,"longitude":-46.53833}],"_id":"_p0PU1bB494I7276SaKJ4"}
+{"cities":[{"name":"Santo André, SP, BR","latitude":-23.66389,"longitude":-46.53833},{"name":"São Paulo, SP, BR","latitude":-23.550394444,"longitude":-46.633947222}],"_id":"_p0PU1bB494I7276SaKJ4"}
+{"cities":[{"name":"Santo André, SP, BR","latitude":-23.66389,"longitude":-46.53833},{"name":"São Paulo, SP, BR","latitude":-23.550394444,"longitude":-46.633947222},{"name":"Curitiba, PR, BR","latitude":-25.429722222,"longitude":-49.271944444}],"_id":"_p0PU1bB494I7276SaKJ4"}
