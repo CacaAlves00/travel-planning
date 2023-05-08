@@ -1,17 +1,26 @@
 .search-input {
-    background-image: url('./../../../public/search.svg');
-    background-position: 1.4vw center;
-    background-repeat: no-repeat;
-    background-size: 2vw;
-    padding-left: 4.5vw;
-    width: 30vw;
-    height: 6vh;
-    font-size: 1.1rem;
-    border: 2px solid #292625;
-    border-radius: 4px;
-    background-color: transparent;
+  background-image: url('./../../../public/search.svg');
+  background-position: 1.4vw center;
+  background-repeat: no-repeat;
+  background-size: 2vw;
+  padding-left: 4.5vw;
+  width: 30vw;
+  height: 6vh;
+  font-size: 1.1rem;
+  border: 2px solid #292625;
+  border-radius: 4px;
+  background-color: transparent;
 
-    &:focus {
-      outline: none;
-    }
+  &:focus {
+    outline: none;
   }
+
+  @media screen and (orientation: portrait) {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 7vw;
+    // padding: 0;
+    background-size: 4.5vw;
+    font-size: 1.1rem;
+  }
+}

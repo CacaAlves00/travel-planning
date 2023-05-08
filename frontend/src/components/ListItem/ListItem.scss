@@ -16,14 +16,28 @@
     transform: scale(1.04);
   }
 
+  @media screen and (orientation: portrait) {
+    height: 7vh;
+  }
+
   .buttons {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     column-gap: 1.5vw;
+
+    @media screen and (orientation: portrait) {
+      column-gap: 3vw;
+    }
+
     img {
       width: 4vh;
       height: 4vh;
+
+      @media screen and (orientation: portrait) {
+        width: 3vh;
+        height: 3vh;
+      }
     }
   }
 }

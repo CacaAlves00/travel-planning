@@ -2,6 +2,12 @@
   cursor: pointer;
   position: relative;
 
+  @media screen and (orientation: portrait) {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
   .search-dropdown {
     border-radius: 1px;
     position: absolute;

@@ -8,5 +8,10 @@
     font-weight: 300;
     font-size: 1.2rem;
     margin-right: .5vw;
+    
+    @media screen and (orientation: portrait) {
+      margin-right: 1vw;
+
+    }
   }
 }

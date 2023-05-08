@@ -23,8 +23,8 @@ function TravelPageFooter() {
 
     return (
         <footer className='travel-page-footer'>
-            <span> {totalHours}h {totalMinutes} min</span>
             <span>Duração total</span>
+            <span> {totalHours}h {totalMinutes} min</span>
             <span> ({totalDistancesAndDurationsBetweenCities.distanceInKms} km)</span>
         </footer>
     )
