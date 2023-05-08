@@ -36,3 +36,11 @@
 {"$$deleted":true,"_id":"5d57uBw1lcL1_jY47L9tf"}
 {"cities":[],"_id":"Pa-7xMGIEaDjDTP_8f8xr"}
 {"cities":[{"name":"Isla San Lorenzo, E, AR","latitude":-32.956111111,"longitude":-58.137777777}],"_id":"Pa-7xMGIEaDjDTP_8f8xr"}
+{"cities":[],"_id":"Pa-7xMGIEaDjDTP_8f8xr"}
+{"$$deleted":true,"_id":"Pa-7xMGIEaDjDTP_8f8xr"}
+{"$$deleted":true,"_id":"2XlPuok-hoA6aD7YhLZqb"}
+{"cities":[],"_id":"_p0PU1bB494I7276SaKJ4"}
+{"cities":[{"name":"Irati, PR, BR","latitude":-25.46722,"longitude":-50.65111}],"_id":"_p0PU1bB494I7276SaKJ4"}
+{"cities":[{"name":"Irati, PR, BR","latitude":-25.46722,"longitude":-50.65111},{"name":"Santo André, SP, BR","latitude":-23.66389,"longitude":-46.53833}],"_id":"_p0PU1bB494I7276SaKJ4"}
+{"cities":[{"name":"Irati, PR, BR","latitude":-25.46722,"longitude":-50.65111},{"name":"Santo André, SP, BR","latitude":-23.66389,"longitude":-46.53833},{"name":"Curiúva, PR, BR","latitude":-24.032777777,"longitude":-50.457777777}],"_id":"_p0PU1bB494I7276SaKJ4"}
+{"cities":[{"name":"Irati, PR, BR","latitude":-25.46722,"longitude":-50.65111},{"name":"Santo André, SP, BR","latitude":-23.66389,"longitude":-46.53833},{"name":"Curiúva, PR, BR","latitude":-24.032777777,"longitude":-50.457777777},{"name":"Pindobaçu, BA, BR","latitude":-10.74167,"longitude":-40.36083}],"_id":"_p0PU1bB494I7276SaKJ4"}
