@@ -1,15 +1,3 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "backend/dist/app.js",
-        "use": "@now/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "backend/dist/app.js"
-      }
-    ]
+    "rewrites": [{ "source": "/(.*)", "destination": "/backend/dist/app.js" }]
   }
