@@ -1,3 +1,9 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/backend/dist/app.js" }]
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/backend/dist/app.js"
+      }
+    ]
   }
+  
