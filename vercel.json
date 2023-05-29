@@ -1,9 +1,0 @@
-{
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/backend/dist/app.js"
-      }
-    ]
-  }
-  

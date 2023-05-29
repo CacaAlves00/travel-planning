@@ -13,6 +13,8 @@ export default Travel
 
 const API_URL = `${process.env.REACT_APP_BACKEND_URL}/travel`
 
+console.log(process.env)
+
 export async function getTravels(): Promise<Travel[]> {
   const response: AxiosResponse<{ data: Travel[] }> = await axios.get(`${API_URL}`)
   return response.data.data
